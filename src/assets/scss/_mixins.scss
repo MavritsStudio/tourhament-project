@@ -31,3 +31,18 @@
           }
     }
 }
+
+@mixin profile-block{
+  .profile-container{
+    border: 2px solid #F9F9F9;
+    border-radius:25px;
+  }
+}
+
+@mixin text-style{
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

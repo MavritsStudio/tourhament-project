@@ -1,0 +1,130 @@
+@import "mixins";
+.profile-page{
+    button:active, button:focus {
+        outline: none !important;
+      }
+      button::-moz-focus-inner {
+        border: 0 !important;
+      }
+    .profile-page-container{
+        @include profile-block();
+        @include text-style();
+        height: 100vh;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        .header{
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            color: #3D3D3D;
+            margin-top: 18px;
+        }
+        .body{
+            margin: 0 467px;
+            height: 100%;
+            .profile-card{
+                background-color: #F9F9F9;
+                padding: 20px;
+                width: 310px;
+                height: 310px;
+                flex-shrink: 0;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-content: space-between;
+                justify-content: space-between;
+    
+                .user-name{
+                    color: #313942;
+                }
+                .user-id{
+                    color: #B4B8BC;
+                }
+                
+                .user-icon{        
+                    height: 138px;
+                    background: center center no-repeat;
+                    background-size:auto;
+                    background-image: url("/src/assets/ellipse-icon.svg");
+                    line-height: 138px;
+                    font-size: 57px;
+                }
+    
+                .copy-id-button{
+                    border: 0;
+                    border-radius: 0;
+                    font-size: 22px;
+                    background: center center no-repeat;
+                    background-size: contain;
+                    background-image: url("/src/assets/copyButton.svg");
+                    height: 36px;
+                }
+            }
+    
+            .commands-list{
+                background-color: #F9F9F9;
+            }
+    
+            .tournament-history{
+                text-align: left;
+                padding: 25px;
+                border-radius: 25px;
+                background: #F6F7F8;
+                color: #5C6773;
+                .tournament-list{
+                    list-style-type: none;
+                    padding: 0;
+                    .tournament{
+                        cursor: default;
+                        .tournament-wrapper{
+                            border-radius: 25px;
+                            border: 1.5px solid #CBD5DA;
+                            background: #F6F7F8;
+                            padding: 21px 31px;
+                            .tournament-header{
+                                margin-bottom: 15px;
+                                .tournament-command-name{
+                                    color: #3D3D3D;
+                                }
+                                .tournament-date{
+                                    color: #BABABA;
+                                }
+                            }
+                            .command-block {
+                                .command-name{
+                                    margin-bottom: 5px;
+                                }
+                                color: #707070;
+                                border-radius: 10px;
+                                background: #ECEEEF;
+                                padding: 18px 23px;
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    
+        .footer{
+            position: -webkit-sticky;
+            position: sticky;
+            bottom: 0;
+            width: 1920px;
+            height: 86px;
+            flex-shrink: 0;
+            border-radius: 25px 25px 0px 0px;
+            box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.14);
+            button{
+                margin-top: 16px;
+                width: 405px;
+                height: 53px;
+                flex-shrink: 0;
+                border-radius: 58px;
+                background: #000;
+                color: #FFF;
+            }
+        }
+    }
+}
